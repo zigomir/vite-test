@@ -2,6 +2,19 @@
 
 See ./test directory
 
+## setup prior landing PR
+
+```sh
+git clone git@github.com:zigomir/vue-test-utils-next.git
+cd vue-test-utils-next
+yarn
+git checkout browser-es-build
+yarn build
+yarn link
+```
+
+and then in this repo, `yarn link "vue-test-utils-next"`
+
 ## usage
 
 edit `test/test.js` and
