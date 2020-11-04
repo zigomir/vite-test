@@ -2,7 +2,7 @@
 import { mount } from '@vue/test-utils/dist/vue-test-utils.esm-browser'
 // import { mount } from '@vue/test-utils'
 import { assert } from '@esm-bundle/chai'
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from '../src/components/HelloWorld.vue'
 
 mocha.setup('bdd')
 

@@ -1,5 +1,19 @@
 # vite-test
 
+See ./test directory
+
+## usage
+
+edit `test/test.js` and
+
+```sh
+# for ci
+yarn test
+
+# for local dev; open http://localhost:3000/test/
+yarn dev
+```
+
 ## motivation
 
 We're using `vite` and `vue 3` in development and production at @sleuth.io

@@ -7,7 +7,7 @@ const PORT = 3001
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
-  const address = `http://localhost:${PORT}/test.html`
+  const address = `http://localhost:${PORT}/test/`
   await page.goto(address, { waitUntil: 'domcontentloaded' })
 
   let exitCode = 0

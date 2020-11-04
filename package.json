@@ -2,7 +2,7 @@
   "private": "true",
   "scripts": {
     "dev": "vite",
-    "test": "node src/pupeteer.mjs",
+    "test": "node test/ci.mjs",
     "build": "vite build"
   },
   "dependencies": {
