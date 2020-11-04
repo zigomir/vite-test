@@ -1,0 +1,18 @@
+{
+  "private": "true",
+  "scripts": {
+    "dev": "vite",
+    "test": "node src/pupeteer.mjs",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.2"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.1.5",
+    "@vue/compiler-sfc": "^3.0.2",
+    "@vue/test-utils": "^2.0.0-beta.8",
+    "puppeteer": "^5.4.1",
+    "vite": "^1.0.0-rc.9"
+  }
+}
