@@ -2,7 +2,7 @@
 
 See ./test directory
 
-## setup prior landing PR
+## setup prior landing [PR](https://github.com/vuejs/vue-test-utils-next/pull/235)
 
 ```sh
 git clone git@github.com:zigomir/vue-test-utils-next.git
@@ -46,5 +46,5 @@ Besides that, I also prefer running frontend test in browser whenever possible. 
 
 - [ ] instead of including mocha directly in `./test.html`, find alternative that can be imported in `src/test.js`
 - [ ] ESM compatible assertion library; Currently using `@esm-bundle/chai` as a `chai` bundled as ESM
-- [ ] `vue-test-utils-next` browser compatible ESM build
+- [ ] `vue-test-utils-next` browser compatible ESM build – https://github.com/vuejs/vue-test-utils-next/pull/235
 - [ ] figure out HMR for even faster feedback cycle; see more in https://github.com/vitejs/vite#hot-module-replacement
