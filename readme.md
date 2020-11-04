@@ -44,6 +44,7 @@ Besides that, I also prefer running frontend test in browser whenever possible. 
 
 ## TODOs
 
+- [ ] try out all / most of @vue/test-utils and see if / how they work
 - [ ] instead of including mocha directly in `./test.html`, find alternative that can be imported in `src/test.js`
 - [ ] ESM compatible assertion library; Currently using `@esm-bundle/chai` as a `chai` bundled as ESM
 - [ ] `vue-test-utils-next` browser compatible ESM build – https://github.com/vuejs/vue-test-utils-next/pull/235
