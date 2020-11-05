@@ -9,18 +9,18 @@ const PORT = 3001
   const page = await browser.newPage()
   const address = `http://localhost:${PORT}/test/`
 
-  let exitCode = 0
-  let gotAtLeastOnePass = false
+  let passedTests = 0
+  let failedTests = 0
 
   // define listener before page.goto is important as uvu is so fast
   page.on('console', (msg) => {
     // This is highly coupled to current uvu output and can break anytime :/
     if (msg._text.includes('✘')) {
-      exitCode = 1
+      failedTests++
       process.stdout.write('\x1b[31m✘') // red x
     }
     if (msg._text.includes('•')) {
-      gotAtLeastOnePass = true
+      passedTests++
       process.stdout.write('\x1b[32m•') // green dot
     }
   })
@@ -28,11 +28,12 @@ const PORT = 3001
   await page.goto(address, { waitUntil: 'domcontentloaded' })
   await browser.close()
 
-  const passed = exitCode === 0 && gotAtLeastOnePass
+  const passed = failedTests === 0 && passedTests > 0
+  const exitCode = passed ? 0 : 1
 
   console.log('\x1b[0m') // resets color
   console.log(
-    passed
+    exitCode === 0
     ? '🤘 Tests passed.'
     : `💩 Tests failed. Open in real browser to debug while running vite server`
   )
