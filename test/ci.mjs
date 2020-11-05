@@ -10,15 +10,16 @@ const PORT = 3001
   const address = `http://localhost:${PORT}/test/`
   await page.goto(address, { waitUntil: 'domcontentloaded' })
 
-  let exitCode = 0
-  let gotAtLeastOnePass = false
+  let passedTests = 0
+  let failedTests = 0
+
   page.on('console', (msg) => {
     if (msg._text === 'fail') {
-      exitCode = 1
+      failedTests++
       process.stdout.write('\x1b[31m.') // red dot
     }
     if (msg._text === 'pass') {
-      gotAtLeastOnePass = true
+      passedTests++
       process.stdout.write('\x1b[32m.') // green dot
     }
   })
@@ -26,7 +27,8 @@ const PORT = 3001
   await page.evaluate(() => {}) // needed for mocha to load
   await browser.close()
 
-  const passed = exitCode === 0 && gotAtLeastOnePass
+  const passed = failedTests === 0 && passedTests > 0
+  const exitCode = passed ? 0 : 1
 
   console.log('\x1b[0m') // resets color
   console.log(
