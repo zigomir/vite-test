@@ -49,5 +49,6 @@ Besides that, I also prefer running frontend test in browser whenever possible. 
 
 ## TODOs
 
+- [ ] fix for `uvu` – https://github.com/lukeed/uvu/pull/63
 - [ ] try out all / most of @vue/test-utils and see if / how they work
 - [ ] figure out HMR for even faster feedback cycle; see more in https://github.com/vitejs/vite#hot-module-replacement
