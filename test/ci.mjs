@@ -23,7 +23,7 @@ const PORT = 3001
     }
   })
 
-  await page.evaluate(() => {})
+  await page.evaluate(() => {}) // needed for mocha to load
   await browser.close()
 
   const passed = exitCode === 0 && gotAtLeastOnePass
