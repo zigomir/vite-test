@@ -8,22 +8,24 @@ const PORT = 3001
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   const address = `http://localhost:${PORT}/test/`
-  await page.goto(address, { waitUntil: 'domcontentloaded' })
 
   let exitCode = 0
   let gotAtLeastOnePass = false
+
+  // define listener before page.goto is important as uvu is so fast
   page.on('console', (msg) => {
-    if (msg._text === 'fail') {
+    // This is highly coupled to current uvu output and can break anytime :/
+    if (msg._text.includes('✘')) {
       exitCode = 1
-      process.stdout.write('\x1b[31m.') // red dot
+      process.stdout.write('\x1b[31m✘') // red x
     }
-    if (msg._text === 'pass') {
+    if (msg._text.includes('•')) {
       gotAtLeastOnePass = true
-      process.stdout.write('\x1b[32m.') // green dot
+      process.stdout.write('\x1b[32m•') // green dot
     }
   })
 
-  await page.evaluate(() => {})
+  await page.goto(address, { waitUntil: 'domcontentloaded' })
   await browser.close()
 
   const passed = exitCode === 0 && gotAtLeastOnePass
