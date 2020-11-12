@@ -8,23 +8,24 @@ const PORT = 3001
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   const address = `http://localhost:${PORT}/test/`
-  await page.goto(address, { waitUntil: 'domcontentloaded' })
 
   let passedTests = 0
   let failedTests = 0
 
+  // define listener before page.goto is important as uvu is so fast
   page.on('console', (msg) => {
-    if (msg._text === 'fail') {
+    // This is highly coupled to current uvu output and can break anytime :/
+    if (msg._text.includes('✘')) {
       failedTests++
-      process.stdout.write('\x1b[31m.') // red dot
+      process.stdout.write('\x1b[31m✘') // red x
     }
-    if (msg._text === 'pass') {
+    if (msg._text.includes('•')) {
       passedTests++
-      process.stdout.write('\x1b[32m.') // green dot
+      process.stdout.write('\x1b[32m•') // green dot
     }
   })
 
-  await page.evaluate(() => {}) // needed for mocha to load
+  await page.goto(address, { waitUntil: 'domcontentloaded' })
   await browser.close()
 
   const passed = failedTests === 0 && passedTests > 0

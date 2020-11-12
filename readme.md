@@ -2,18 +2,14 @@
 
 See ./test directory
 
-## setup prior landing [PR](https://github.com/vuejs/vue-test-utils-next/pull/235)
 
 ```sh
-git clone git@github.com:zigomir/vue-test-utils-next.git
+git clone git@github.com:vuejs/vue-test-utils-next.git
 cd vue-test-utils-next
 yarn
-git checkout browser-es-build
-yarn build
-yarn link
+yarn test # for puppeteer
+yarn dev # for actual browser
 ```
-
-and then in this repo, `yarn link "vue-test-utils-next"`
 
 ## usage
 
@@ -45,7 +41,5 @@ Besides that, I also prefer running frontend test in browser whenever possible. 
 ## TODOs
 
 - [ ] try out all / most of @vue/test-utils and see if / how they work
-- [ ] instead of including mocha directly in `./test.html`, find alternative that can be imported in `src/test.js`
-- [ ] ESM compatible assertion library; Currently using `@esm-bundle/chai` as a `chai` bundled as ESM
-- [ ] `vue-test-utils-next` browser compatible ESM build – https://github.com/vuejs/vue-test-utils-next/pull/235
 - [ ] figure out HMR for even faster feedback cycle; see more in https://github.com/vitejs/vite#hot-module-replacement
+  tried few things but couldn't make tests to run again
