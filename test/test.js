@@ -1,12 +1,11 @@
-// this is now only available on: https://github.com/vuejs/vue-test-utils-next/pull/235
-import { mount } from '@vue/test-utils/dist/vue-test-utils.esm-browser'
+import { mount } from '@vue/test-utils/dist/vue-test-utils.esm-browser' // available since 2.0.0-beta.9 (https://github.com/vuejs/vue-test-utils-next/pull/235)
 import HelloWorld from '../src/components/HelloWorld.vue'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
 test('should render msg prop 1', () => {
-  const wrapper = mount(HelloWorld, { props: { msg: 'Sleuth' } })
-  assert.ok(wrapper.html().includes('Sleuth'))
+  const wrapper = mount(HelloWorld, { props: { msg: 'test' } })
+  assert.ok(wrapper.html().includes('test'))
 })
 
 test('should increment count', async () => {
