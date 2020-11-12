@@ -33,7 +33,7 @@ const PORT = 3001
 
   console.log('\x1b[0m') // resets color
   console.log(
-    exitCode === 0
+    passed
     ? '🤘 Tests passed.'
     : `💩 Tests failed. Open in real browser to debug while running vite server`
   )
