@@ -3,22 +3,13 @@
 See ./test directory
 
 
-## setup
-
-use latest master of `vue-test-utils-next` because as of [v2.0.0-beta.8](https://github.com/vuejs/vue-test-utils-next/releases/tag/v2.0.0-beta.8),
-[esm browser build](https://github.com/vuejs/vue-test-utils-next/pull/235) hasn't been released yet.
-
-
 ```sh
 git clone git@github.com:vuejs/vue-test-utils-next.git
 cd vue-test-utils-next
 yarn
-git checkout browser-es-build
-yarn build
-yarn link
+yarn test # for puppeteer
+yarn dev # for actual browser
 ```
-
-and then in this repo, `yarn link "vue-test-utils-next"`
 
 ## usage
 
@@ -49,6 +40,6 @@ Besides that, I also prefer running frontend test in browser whenever possible. 
 
 ## TODOs
 
-- [ ] fix for `uvu` – https://github.com/lukeed/uvu/pull/63
 - [ ] try out all / most of @vue/test-utils and see if / how they work
 - [ ] figure out HMR for even faster feedback cycle; see more in https://github.com/vitejs/vite#hot-module-replacement
+  tried few things but couldn't make tests to run again
