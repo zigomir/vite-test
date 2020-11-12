@@ -17,11 +17,9 @@ Besides that, I prefer running frontend test in browser whenever possible – `n
 - `@vue/test-utils`
 - `puppeteer` only if you want to run same tests on your CI
 
-See ./test directory
-
 ## usage
 
-edit `test/test.js` and
+edit `test/test.js` to add more test files
 
 ```sh
 # for ci
