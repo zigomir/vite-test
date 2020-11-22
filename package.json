@@ -1,8 +1,26 @@
 {
-  "private": "true",
+  "name": "vite-test",
+  "version": "0.1.0",
+  "description": "vite-test ",
+  "keywords": [
+    "vite",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zigomir/vite-test.git"
+  },
+  "homepage": "https://github.com/zigomir/vite-test",
+  "author": "Ziga Vidic <ziga@hey.com> (https://ziga.dev/)",
+  "license": "MIT",
+  "main": "./ci.mjs",
+  "module": "./ci.mjs",
+  "files": [
+    "./ci.mjs"
+  ],
   "scripts": {
     "dev": "vite",
-    "test": "node test/ci.mjs",
+    "test": "node .",
     "build": "vite build"
   },
   "dependencies": {

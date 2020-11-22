@@ -7,7 +7,7 @@ const PORT = 3001
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
-  const address = `http://localhost:${PORT}/test/`
+  const address = `http://localhost:${PORT}/test.html`
 
   let passedTests = 0
   let failedTests = 0

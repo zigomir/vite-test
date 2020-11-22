@@ -1,4 +1,4 @@
-import { mount } from '../../test/test.js'
+import { mount } from '../../test.js'
 import HelloWorld from './HelloWorld.vue'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
