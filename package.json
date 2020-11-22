@@ -13,14 +13,17 @@
   "homepage": "https://github.com/zigomir/vite-test",
   "author": "Ziga Vidic <ziga@hey.com> (https://ziga.dev/)",
   "license": "MIT",
-  "main": "./ci.mjs",
-  "module": "./ci.mjs",
+  "main": "./bin/ci.mjs",
+  "module": "./bin/ci.mjs",
   "files": [
-    "./ci.mjs"
+    "bin"
   ],
+  "bin": {
+    "vite-test": "bin/ci.mjs"
+  },
   "scripts": {
     "dev": "vite",
-    "test": "node .",
+    "test": "./bin/ci.mjs",
     "build": "vite build"
   },
   "dependencies": {
