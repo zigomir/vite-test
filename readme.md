@@ -1,5 +1,19 @@
 # vite-test
 
+## setup
+
+```sh
+npm install vite-test
+touch '<script type="module" src="./test.js"></script>' > test.html
+touch "export * from '@vue/test-utils/dist/vue-test-utils.esm-browser'" > test.js
+```
+
+add imports of your tests into just created `test.js`, like so
+
+```js
+import './src/components/HelloWorld.test.js'
+```
+
 ## motivation
 
 We're using `vite` and `vue 3` at @sleuth.io.

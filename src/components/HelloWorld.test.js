@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils/dist/vue-test-utils.esm-browser' // available since 2.0.0-beta.9 (https://github.com/vuejs/vue-test-utils-next/pull/235)
+import { mount } from '../../test.js'
 import HelloWorld from './HelloWorld.vue'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'

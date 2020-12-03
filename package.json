@@ -1,18 +1,39 @@
 {
-  "private": "true",
+  "name": "vite-test",
+  "version": "0.1.0",
+  "description": "vite-test ",
+  "keywords": [
+    "vite",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zigomir/vite-test.git"
+  },
+  "homepage": "https://github.com/zigomir/vite-test",
+  "author": "Ziga Vidic <ziga@hey.com> (https://ziga.dev/)",
+  "license": "MIT",
+  "main": "./bin/ci.mjs",
+  "module": "./bin/ci.mjs",
+  "files": [
+    "bin"
+  ],
+  "bin": {
+    "vite-test": "bin/ci.mjs"
+  },
   "scripts": {
     "dev": "vite",
-    "test": "node test/ci.mjs",
+    "test": "./bin/ci.mjs",
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.2"
+    "vue": "^3.0.4"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.2",
-    "@vue/test-utils": "^2.0.0-beta.9",
-    "puppeteer": "^5.4.1",
-    "uvu": "^0.4.1",
-    "vite": "^1.0.0-rc.9"
+    "@vue/compiler-sfc": "^3.0.4",
+    "@vue/test-utils": "^2.0.0-beta.12",
+    "puppeteer": "^5.5.0",
+    "uvu": "^0.5.1",
+    "vite": "^1.0.0-rc.13"
   }
 }
