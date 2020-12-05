@@ -1,16 +1,11 @@
 # vite-test
 
-## motivation
-
-We're using `vite` and `vue 3` at @sleuth.io.
-When I wanted to add front-end testing with `@vue/test-utils` and `jest` I had to add: `jest`, `eslint-plugin-jest`, `ts-jest` and `vue-jest`.
-`ts-jest` was broken (at the time) as described in this [issue](https://github.com/vuejs/vue-jest/issues/294).
-Besides that, I prefer running frontend test in browser whenever possible – `node` and `jsdom` will never feel like home.
+> use `vite` to test your vue app in real browser and/or `puppeteer`
 
 ## benefits
 
 - very quick execution
-- native environment
+- native environment compared to `jest` & `js-dom`
 
 ## setup
 
