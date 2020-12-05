@@ -2,9 +2,6 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "test": "vite-test"
-  },
-  "devDependencies": {
-    "vite-test": "file:../"
+    "test": "../bin/ci.mjs"
   }
 }
