@@ -1,19 +1,5 @@
 # vite-test
 
-## setup
-
-```sh
-npm install vite-test --save-dev
-touch '<script type="module" src="./test.js"></script>' > test.html
-touch "export * from '@vue/test-utils/dist/vue-test-utils.esm-browser'" > test.js
-```
-
-add imports of your tests into just created `test.js`, like so
-
-```js
-import './src/components/HelloWorld.test.js'
-```
-
 ## motivation
 
 We're using `vite` and `vue 3` at @sleuth.io.
@@ -26,22 +12,46 @@ Besides that, I prefer running frontend test in browser whenever possible – `n
 - very quick execution
 - native environment
 
-## extra dependencies
+## setup
 
-- `@vue/test-utils`
-- `puppeteer` only if you want to run same tests on your CI
+```sh
+npm install vite-test --save-dev
+# or
+yarn add -D vite-test
+echo '<script type="module" src="./test.js"></script>' > test.html
+echo "export * from '@vue/test-utils/dist/vue-test-utils.esm-browser'" > test.js
+```
+
+add `vite-test` to your `package.json`
+
+```json
+{
+  "scripts": {
+    "test": "vite-test"
+  }
+}
+```
+
+add imports of your tests into just created `test.js`, e.g.
+
+```js
+import './src/components/HelloWorld.test.js'
+```
 
 ## usage
 
-edit `test/test.js` to add more test files
+### terminal / CI
+`vite-test` will run your tests in `puppeteer`
 
-```sh
-# for ci
-yarn test
+### browser through vite
 
-# for local dev; open http://localhost:3000/test/
-yarn dev
-```
+Open http://localhost:3000/test.html when running `vite` dev server and open your dev tools
+
+## dependencies
+
+- [@vue/test-utils](https://github.com/vuejs/vue-test-utils-next) – version 2+ which supports Vue 3
+- [puppeteer](https://pptr.dev) to run tests on your CI
+- [uvu test runner](https://github.com/lukeed/uvu)
 
 ## else
 
