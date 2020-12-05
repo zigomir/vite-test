@@ -22,9 +22,7 @@
     "vite-test": "bin/ci.mjs"
   },
   "scripts": {
-    "dev": "vite",
-    "test": "./bin/ci.mjs",
-    "build": "vite build"
+    "test": "cd test && yarn test"
   },
   "dependencies": {
     "@vue/test-utils": "^2.0.0-beta.12",
