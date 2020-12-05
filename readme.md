@@ -17,6 +17,9 @@ echo '<script type="module" src="./test.js"></script>' > test.html
 echo "export * from '@vue/test-utils/dist/vue-test-utils.esm-browser'" > test.js
 ```
 
+You need to use `@vue/test-utils/dist/vue-test-utils.esm-browser` above or else `vite` won't serve browser compatible `vue-test-utils`.
+Then in your tests, you can use `import { shallowMount, ... } from './test.js'` to import `vue-test-utils` functions you need.
+
 add `vite-test` to your `package.json`
 
 ```json
