@@ -3,7 +3,7 @@
 ## setup
 
 ```sh
-npm install vite-test
+npm install vite-test --save-dev
 touch '<script type="module" src="./test.js"></script>' > test.html
 touch "export * from '@vue/test-utils/dist/vue-test-utils.esm-browser'" > test.js
 ```
