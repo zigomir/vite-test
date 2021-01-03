@@ -2,10 +2,18 @@
 
 import puppeteer from 'puppeteer'
 import { createServer } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
 const PORT = 3001
 
 ;(async () => {
-  const vite = await createServer({}).listen(PORT)
+  const server = await createServer({
+    plugins: [vue()],
+    server: {
+      port: PORT,
+    },
+  })
+  await server.listen()
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
@@ -40,6 +48,6 @@ const PORT = 3001
     : `💩 Tests failed. Open in real browser to debug while running vite server`
   )
 
-  vite.close()
+  await server.close()
   process.exit(exitCode)
 })()

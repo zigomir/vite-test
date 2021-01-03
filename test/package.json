@@ -3,5 +3,8 @@
   "scripts": {
     "dev": "vite",
     "test": "../bin/ci.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
   }
 }
