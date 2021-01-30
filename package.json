@@ -25,11 +25,11 @@
     "test": "cd test && yarn test"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "^1.0.3",
+    "@vitejs/plugin-vue": "^1.1.3",
     "@vue/compiler-sfc": "^3.0.5",
-    "@vue/test-utils": "^2.0.0-beta.12",
+    "@vue/test-utils": "^2.0.0-rc.0",
     "puppeteer": "^5.5.0",
-    "uvu": "^0.5.1",
-    "vite": "^2.0.0-beta.3"
+    "vite": "^2.0.0-beta.59",
+    "zora": "^4.0.2"
   }
 }
