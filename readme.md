@@ -4,10 +4,18 @@
 
 ## benefits
 
-- very quick execution
+- fast execution, simple setup
+- compared to `jest` this setup is a breeze, e.g. no additional config files, no transformations, just ES modules
 - native environment compared to `jest` & `js-dom`
 
 ## usage
+
+- in your `vite` project you'll need to install this 3 packages
+- `tap-dot` is only needed if you use CI and want to get correct exit code
+
+```sh
+npm install --save-dev vite-test @vue/test-utils@next tap-dot
+```
 
 sample `package.json` scripts:
 
@@ -24,6 +32,7 @@ sample `package.json` scripts:
 Also see `/test` directory
 
 ### terminal / CI
+
 `vite-test` will run your tests in `puppeteer`
 
 ### browser through vite
