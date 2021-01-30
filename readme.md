@@ -7,36 +7,21 @@
 - very quick execution
 - native environment compared to `jest` & `js-dom`
 
-## setup
+## usage
 
-```sh
-npm install vite-test --save-dev
-# or
-yarn add -D vite-test
-echo '<script type="module" src="./test.js"></script>' > test.html
-echo "export * from '@vue/test-utils/dist/vue-test-utils.esm-browser'" > test.js
-```
-
-You need to use `@vue/test-utils/dist/vue-test-utils.esm-browser` above or else `vite` won't serve browser compatible `vue-test-utils`.
-Then in your tests, you can use `import { shallowMount, ... } from './test.js'` to import `vue-test-utils` functions you need.
-
-add `vite-test` to your `package.json`
+sample `package.json` scripts:
 
 ```json
-{
-  "scripts": {
-    "test": "vite-test"
-  }
+"scripts": {
+  "test:debug": "vite-test --debug",
+  "test": "vite-test | tap-dot"
 }
 ```
 
-add imports of your tests into just created `test.js`, e.g.
+- `vite-test --debug` to keep vite server open on `http://localhost:3000` to debug your test in browser dev tools directly, e.g. on `http://localhost:3000/test.html`
+- `vite-test | tap-dot` CI friendly exit code by tap-dot library (`npm install tap-dot`)
 
-```js
-import './src/components/HelloWorld.test.js'
-```
-
-## usage
+Also see `/test` directory
 
 ### terminal / CI
 `vite-test` will run your tests in `puppeteer`
@@ -49,9 +34,4 @@ Open http://localhost:3000/test.html when running `vite` dev server and open you
 
 - [@vue/test-utils](https://github.com/vuejs/vue-test-utils-next) – version 2+ which supports Vue 3
 - [puppeteer](https://pptr.dev) to run tests on your CI
-- [uvu test runner](https://github.com/lukeed/uvu)
-
-## else
-
-I tried to figuring out [HMR](https://github.com/vitejs/vite#hot-module-replacement) for even faster feedback cycle but
-couldn't make it work because test runner doesn't implement a `re-run` as a feature.
+- [zora test runner](https://github.com/lorenzofox3/zora)

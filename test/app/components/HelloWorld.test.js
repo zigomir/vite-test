@@ -1,18 +1,15 @@
-import { mount } from '../../test.js'
+import { shallowMount } from '@vue/test-utils'
 import HelloWorld from './HelloWorld.vue'
-import { test } from 'uvu'
-import * as assert from 'uvu/assert'
+import { test, ok } from 'zora'
 
 test('should render msg prop', () => {
-  const wrapper = mount(HelloWorld, { props: { msg: 'test' } })
-  assert.ok(wrapper.html().includes('test'))
+  const wrapper = shallowMount(HelloWorld, { props: { msg: 'test' } })
+  ok(wrapper.html().includes('test'))
 })
 
 test('should increment count', async () => {
-  const wrapper = mount(HelloWorld)
-  assert.ok(wrapper.html().includes('count is: 0'))
+  const wrapper = shallowMount(HelloWorld)
+  ok(wrapper.html().includes('count is: 0'))
   await wrapper.find('button').trigger('click')
-  assert.ok(wrapper.html().includes('count is: 1'))
+  ok(wrapper.html().includes('count is: 1'))
 })
-
-test.run()
