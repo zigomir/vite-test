@@ -11,7 +11,7 @@ const debug = process.argv[2] === '--debug'
     server: {
       port: PORT,
     },
-  }, false)
+  })
   await server.listen()
 
   const browser = await puppeteer.launch()
