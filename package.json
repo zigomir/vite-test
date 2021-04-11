@@ -27,6 +27,6 @@
   "dependencies": {
     "puppeteer": "^8.0.0",
     "vite": "^2.1.5",
-    "zora": "^4.0.2"
+    "zora": "^4.1.0"
   }
 }
