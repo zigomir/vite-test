@@ -1,13 +1,13 @@
 import { shallowMount } from '@vue/test-utils'
 import HelloWorld from './HelloWorld.vue'
-import { test, ok } from 'zora'
+import { test } from 'zora'
 
-test('should render msg prop', () => {
+test('should render msg prop', ({ok}) => {
   const wrapper = shallowMount(HelloWorld, { props: { msg: 'test' } })
   ok(wrapper.html().includes('test'))
 })
 
-test('should increment count', async () => {
+test('should increment count', async ({ok}) => {
   const wrapper = shallowMount(HelloWorld)
   ok(wrapper.html().includes('count is: 0'))
   await wrapper.find('button').trigger('click')

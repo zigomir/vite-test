@@ -431,7 +431,7 @@ util-deprecate@^1.0.1:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
-vite@^2.1.5:
+vite@^2.3.6:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.3.6.tgz#1f7cfde88a51a802d69000c7bac85d481c2e871c"
   integrity sha512-fsEpNKDHgh3Sn66JH06ZnUBnIgUVUtw6ucDhlOj1CEqxIkymU25yv1/kWDPlIjyYHnalr0cN6V+zzUJ+fmWHYw==
@@ -461,7 +461,7 @@ yauzl@^2.10.0:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
 
-zora@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/zora/-/zora-4.1.0.tgz#a0db6979ac315604df87794edaa72a71456ff4ce"
-  integrity sha512-tFowFksaFIwp0hzZ9dhM1rlaicS6VNjNMxEH3phgR5Glz3EMAoRujjJ50aTLAsl//SArTdG/kBt5EuvhqS6mww==
+zora@^5.0.0-alpha.3:
+  version "5.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/zora/-/zora-5.0.0-alpha.3.tgz#f0aa01f5b2332ad550092c6d8757d02bc80f5114"
+  integrity sha512-GfDl2+9QSnZJxHKfIu3KCwqW2VDft86uU6kStJpDa8nHPMPVkucRsL4kOPiapjxUcrDY8jfFP+gh4RcuAoL+oA==
