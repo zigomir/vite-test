@@ -578,6 +578,6 @@ yauzl@^2.10.0:
     fd-slicer "~1.1.0"
 
 zora@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/zora/-/zora-5.0.0.tgz#9f4a1e635524be1d8eac87f818ddcc1a75016bd5"
-  integrity sha512-fA6RdNLtzcCxy4m+HsWYVBnme7Jt1Ez4OgEMo62i6LanJCHawAhZ0n57hetWO35M/057eLVFRbtq7JTBpFNybg==
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/zora/-/zora-5.0.2.tgz#4864ae5e7bb3217385b921bc64f001d4570cd0bd"
+  integrity sha512-HZtoEtYm9iJrym0nvel84NmmmOZyvS9I6q27kO1zAA5W4vY87LnRkokRGd5Qm6nrv0+YhGlr/i5VfVcS+VEK4g==
