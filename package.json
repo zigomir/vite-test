@@ -25,7 +25,7 @@
     "test": "cd test && yarn test"
   },
   "dependencies": {
-    "puppeteer": "^11.0.0",
+    "puppeteer": "^19.2.1",
     "vite": "^2.5.1",
     "zora": "^5.0.0"
   }
